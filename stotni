@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	const int STOTNI_ZA_SEKUNDA = 100;
+	const int SEKUNDI_ZA_MINUTA = 60;
+	const int MINUTI_ZA_CHAS = 60;
+
+	int stotni;
+	
+	cout << "vuvedete stotni \n";
+	cin >> stotni;
+	
+	int sekundi = stotni / STOTNI_ZA_SEKUNDA;
+	int ostatuk1 = stotni % STOTNI_ZA_SEKUNDA;
+	int minuti = sekundi / SEKUNDI_ZA_MINUTA;
+	int ostatuk2 = sekundi % SEKUNDI_ZA_MINUTA;
+	int chas = minuti / MINUTI_ZA_CHAS;
+	int ostatuk3 = minuti % MINUTI_ZA_CHAS;
+	
+	cout << chas << " chasa: ";
+	cout << ostatuk3 << " minuti: ";
+	cout << ostatuk2 << " sekundi: ";
+	cout << ostatuk1 << " stotni: ";
+	return 0;
+}
